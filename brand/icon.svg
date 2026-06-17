@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Repo Swap — neobrutalist icon source. Palette matches popup.css (--ink #0b0b0b, --green #93f27d). -->
+  <!-- offset shadow -->
+  <rect x="22" y="22" width="84" height="84" rx="14" fill="#0b0b0b"/>
+  <!-- tile + hard border -->
+  <rect x="13" y="13" width="84" height="84" rx="14" fill="#93f27d" stroke="#0b0b0b" stroke-width="8"/>
+  <!-- up-right swap arrow -->
+  <g fill="none" stroke="#0b0b0b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="40" y1="70" x2="70" y2="40"/>
+    <polyline points="48,40 70,40 70,62"/>
+  </g>
+</svg>

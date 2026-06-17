@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Repo Swap</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="header">
+        <div>
+          <p class="eyebrow">GitHub Switchboard</p>
+          <h1>Repo Swap</h1>
+        </div>
+        <div class="mark" aria-hidden="true">↗</div>
+      </header>
+
+      <section id="repoCard" class="repo-card" hidden>
+        <span class="label">Detected repo</span>
+        <strong id="repoName">owner/repo</strong>
+      </section>
+
+      <section id="emptyState" class="empty-state" hidden>
+        <strong>Open a GitHub repository to use Repo Swap.</strong>
+        <p>This tool works on URLs like <code>github.com/owner/repo</code>.</p>
+      </section>
+
+      <section id="tools" class="tools" hidden>
+        <div class="group two-col">
+          <h2>AI context</h2>
+          <button data-tool="gitingest">
+            <span>GitIngest</span>
+            <small>Flatten repo into prompt-friendly text</small>
+          </button>
+          <button data-tool="gitmcp">
+            <span>GitMCP</span>
+            <small>Turn repo into a live MCP server</small>
+          </button>
+        </div>
+
+        <div class="group two-col">
+          <h2>Understand</h2>
+          <button data-tool="gitdiagram">
+            <span>GitDiagram</span>
+            <small>Clickable architecture diagram</small>
+          </button>
+          <button data-tool="deepwiki">
+            <span>DeepWiki</span>
+            <small>Auto wiki with Q&amp;A citations</small>
+          </button>
+        </div>
+
+        <div class="group two-col">
+          <h2>Run / evaluate</h2>
+          <button data-tool="githubgg">
+            <span>GitHub.gg</span>
+            <small>Control panel, scan, quality score</small>
+          </button>
+          <button data-tool="stackblitz">
+            <span>StackBlitz</span>
+            <small>Boot repo in browser dev env</small>
+          </button>
+        </div>
+
+        <div class="group">
+          <h2>Signal</h2>
+          <button data-tool="starhistory">
+            <span>Star History</span>
+            <small>Check if the repo is actually alive</small>
+          </button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <label class="checkbox-row">
+          <input id="openInWindow" type="checkbox" />
+          <span>Open in a new window</span>
+        </label>
+        <p class="safety">Third-party tools are best for public repos. Don’t send private/client code or secrets.</p>
+      </footer>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

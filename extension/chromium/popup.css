@@ -1,0 +1,252 @@
+:root {
+  color-scheme: light;
+  --ink: #0b0b0b;
+  --paper: #fae9cc;
+  --cream: #f7efe2;
+  --yellow: #ffd43d;
+  --green: #93f27d;
+  --pink: #ff7bdc;
+  --blue: #78d6ff;
+  --purple: #c9a1ff;
+  --orange: #ff7a5c;
+  --border-radius: 8px;
+  --shadow: 4px 4px 0 var(--ink);
+  --shadow-sm: 3px 3px 0 var(--ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 360px;
+  margin: 0;
+  background: var(--ink);
+  color: var(--ink);
+  font-family: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Arial, sans-serif;
+}
+
+.shell {
+  padding: 12px;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 4px;
+  padding: 3px 7px;
+  border: 2px solid var(--ink);
+  background: var(--green);
+  color: var(--ink);
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  transform: rotate(-1deg);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+h1 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 36px;
+  font-weight: 950;
+  line-height: 0.84;
+  letter-spacing: -0.07em;
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 2px solid var(--ink);
+  border-radius: var(--border-radius);
+  background: var(--green);
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
+  font-size: 22px;
+  font-weight: 950;
+}
+
+.repo-card,
+.empty-state {
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border: 2px solid var(--ink);
+  border-radius: var(--border-radius);
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+  font-size: 10px;
+  font-weight: 950;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+#repoName {
+  display: block;
+  overflow: hidden;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 950;
+  letter-spacing: -0.03em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.empty-state strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 950;
+}
+
+.empty-state p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+code {
+  padding: 1px 4px;
+  border: 1px solid var(--ink);
+  background: var(--yellow);
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.tools {
+  display: grid;
+  gap: 8px;
+}
+
+.group {
+  display: grid;
+  gap: 4px 8px;
+}
+
+.group.two-col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.group h2 {
+  grid-column: 1 / -1;
+  margin: 2px 0 1px;
+  color: var(--ink);
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+button {
+  min-height: 48px;
+  padding: 6px 10px;
+  border: 2px solid var(--ink);
+  border-radius: var(--border-radius);
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  transition: transform 90ms ease, box-shadow 90ms ease, filter 90ms ease;
+}
+
+button:hover,
+button:focus-visible {
+  box-shadow: 1px 1px 0 var(--ink);
+  filter: saturate(1.08);
+  outline: none;
+  transform: translate(2px, 2px);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+button:disabled {
+  cursor: progress;
+  opacity: 0.78;
+}
+
+button[data-tool="gitingest"] { background: var(--green); }
+button[data-tool="gitmcp"] { background: var(--pink); }
+button[data-tool="gitdiagram"] { background: var(--yellow); }
+button[data-tool="deepwiki"] { background: var(--purple); }
+button[data-tool="githubgg"] { background: var(--orange); }
+button[data-tool="stackblitz"] { background: var(--blue); }
+button[data-tool="starhistory"] { background: var(--green); }
+
+button span {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+button small {
+  display: block;
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.footer {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 2px dashed var(--ink);
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border: 3px solid var(--ink);
+  accent-color: var(--pink);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.safety {
+  margin: 6px 0 0;
+  padding: 7px 8px;
+  border: 2px solid var(--ink);
+  border-radius: var(--border-radius);
+  background: var(--yellow);
+  color: var(--ink);
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.2;
+  box-shadow: 3px 3px 0 var(--ink);
+}
